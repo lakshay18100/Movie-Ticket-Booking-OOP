@@ -5,15 +5,11 @@
 
 using namespace std;
 
-// ==========================================
-// 1. ENCAPSULATION: Movie & Seat Management
-// ==========================================
 class Movie {
 private:
     string title;
     string genre;
     vector<string> showTimings;
-    // 5x5 Seat Matrix: false = Available, true = Booked
     bool seats[5][5];
 
 public:
@@ -77,9 +73,6 @@ public:
     }
 };
 
-// ==========================================
-// 2. INHERITANCE & POLYMORPHISM: Ticket Hierarchy
-// ==========================================
 class Ticket {
 protected:
     int bookingId;
@@ -98,7 +91,6 @@ public:
     string getMovieTitle() const { return movieTitle; }
     string getSeatLabel() const { return seatLabel; }
 
-    // Virtual function for Runtime Polymorphism
     virtual double calculatePrice() const {
         return basePrice; // Standard price
     }
@@ -114,7 +106,6 @@ public:
     }
 };
 
-// Derived Class demonstrating Inheritance
 class IMAXTicket : public Ticket {
 private:
     double imaxSurcharge;
@@ -124,7 +115,6 @@ public:
     IMAXTicket(int id, string title, string time, string seat, double price)
         : Ticket(id, title, time, seat, price), imaxSurcharge(150.0), glassesFee(50.0) {}
 
-    // Overriding calculatePrice() for Polymorphism
     double calculatePrice() const override {
         return basePrice + imaxSurcharge + glassesFee;
     }
@@ -140,18 +130,13 @@ public:
     }
 };
 
-// ==========================================
-// 3. SYSTEM CONTROLLER & MAIN MENU
-// ==========================================
 int main() {
-    // Initialize sample movies
     vector<Movie> movies = {
         Movie("Interstellar", "Sci-Fi", {"10:00 AM", "02:30 PM", "07:00 PM"}),
         Movie("Spider-Man: Beyond", "Action", {"11:15 AM", "04:00 PM", "09:15 PM"}),
         Movie("Kalki 2898 AD", "Sci-Fi/Mythology", {"01:00 PM", "06:30 PM", "10:00 PM"})
     };
 
-    // Base class pointers vector to achieve Polymorphism
     vector<Ticket*> bookedTickets;
     int nextBookingId = 1001;
     int choice;
@@ -229,7 +214,7 @@ int main() {
             bool found = false;
             for (size_t i = 0; i < bookedTickets.size(); i++) {
                 if (bookedTickets[i]->getBookingId() == cancelId) {
-                    // Free the seat in the corresponding movie
+
                     string mTitle = bookedTickets[i]->getMovieTitle();
                     string sLabel = bookedTickets[i]->getSeatLabel();
                     int row = sLabel[0] - 'A';
@@ -245,7 +230,7 @@ int main() {
                     cout << "Ticket #" << cancelId << " cancelled. Refund of Rs. " 
                          << bookedTickets[i]->calculatePrice() << " initiated.\n";
 
-                    delete bookedTickets[i]; // Free allocated memory
+                    delete bookedTickets[i]; 
                     bookedTickets.erase(bookedTickets.begin() + i);
                     found = true;
                     break;
@@ -266,7 +251,7 @@ int main() {
             }
         } 
         else if (choice == 5) {
-            // Clean up dynamically allocated memory before exiting
+            
             for (auto& ticket : bookedTickets) {
                 delete ticket;
             }
