@@ -1,0 +1,137 @@
+========================================
+      MOVIE TICKET BOOKING SYSTEM       
+========================================
+1. Display Movies & Show Timings
+2. Book a Ticket
+3. Cancel a Ticket
+4. View My Bookings
+5. Exit
+Enter your choice: 1
+
+--- Now Showing ---
+1. Movie: Interstellar (Sci-Fi)
+   Timings: [1] 10:00 AM  [2] 02:30 PM  [3] 07:00 PM  
+2. Movie: Spider-Man: Beyond (Action)
+   Timings: [1] 11:15 AM  [2] 04:00 PM  [3] 09:15 PM  
+3. Movie: Kalki 2898 AD (Sci-Fi/Mythology)
+   Timings: [1] 01:00 PM  [2] 06:30 PM  [3] 10:00 PM  
+
+========================================
+      MOVIE TICKET BOOKING SYSTEM       
+========================================
+1. Display Movies & Show Timings
+2. Book a Ticket
+3. Cancel a Ticket
+4. View My Bookings
+5. Exit
+Enter your choice: 2
+
+Select Movie (1-3): 1
+Movie: Interstellar (Sci-Fi)
+   Timings: [1] 10:00 AM  [2] 02:30 PM  [3] 07:00 PM  
+Select Show Timing (1-3): 3
+
+--- Seat Layout for Interstellar ---
+   1  2  3  4  5
+A [O][O][O][O][O]
+B [O][O][O][O][O]
+C [O][O][O][O][O]
+D [O][O][O][O][O]
+E [O][O][O][O][O]
+([O] = Available, [X] = Booked)
+Enter Row (A-E) and Column (1-5) (e.g., B 3): C 4
+Select Ticket Type (1. Standard [Rs. 250] | 2. IMAX 3D [Rs. 450]): 2
+
+Booking Successful!
+----------------------------------------
+Booking ID : #1001 [IMAX 3D EXPERIENCE]
+Movie      : Interstellar
+Show Time  : 07:00 PM
+Seat       : C4
+Total Paid : Rs. 450.00
+----------------------------------------
+
+========================================
+      MOVIE TICKET BOOKING SYSTEM       
+========================================
+1. Display Movies & Show Timings
+2. Book a Ticket
+3. Cancel a Ticket
+4. View My Bookings
+5. Exit
+Enter your choice: 2
+
+Select Movie (1-3): 2
+Movie: Spider-Man: Beyond (Action)
+   Timings: [1] 11:15 AM  [2] 04:00 PM  [3] 09:15 PM  
+Select Show Timing (1-3): 2
+
+--- Seat Layout for Spider-Man: Beyond ---
+   1  2  3  4  5
+A [O][O][O][O][O]
+B [O][O][O][O][O]
+C [O][O][O][O][O]
+D [O][O][O][O][O]
+E [O][O][O][O][O]
+([O] = Available, [X] = Booked)
+Enter Row (A-E) and Column (1-5) (e.g., B 3): B 2
+Select Ticket Type (1. Standard [Rs. 250] | 2. IMAX 3D [Rs. 450]): 1
+
+Booking Successful!
+----------------------------------------
+Booking ID : #1002 [STANDARD]
+Movie      : Spider-Man: Beyond
+Show Time  : 04:00 PM
+Seat       : B2
+Total Paid : Rs. 250.00
+----------------------------------------
+
+========================================
+      MOVIE TICKET BOOKING SYSTEM       
+========================================
+1. Display Movies & Show Timings
+2. Book a Ticket
+3. Cancel a Ticket
+4. View My Bookings
+5. Exit
+Enter your choice: 4
+
+--- Your Booked Tickets ---
+----------------------------------------
+Booking ID : #1001 [IMAX 3D EXPERIENCE]
+Movie      : Interstellar
+Show Time  : 07:00 PM
+Seat       : C4
+Total Paid : Rs. 450.00
+----------------------------------------
+----------------------------------------
+Booking ID : #1002 [STANDARD]
+Movie      : Spider-Man: Beyond
+Show Time  : 04:00 PM
+Seat       : B2
+Total Paid : Rs. 250.00
+----------------------------------------
+
+========================================
+      MOVIE TICKET BOOKING SYSTEM       
+========================================
+1. Display Movies & Show Timings
+2. Book a Ticket
+3. Cancel a Ticket
+4. View My Bookings
+5. Exit
+Enter your choice: 3
+
+Enter Booking ID to cancel: 1002
+Ticket #1002 cancelled. Refund of Rs. 250.00 initiated.
+
+========================================
+      MOVIE TICKET BOOKING SYSTEM       
+========================================
+1. Display Movies & Show Timings
+2. Book a Ticket
+3. Cancel a Ticket
+4. View My Bookings
+5. Exit
+Enter your choice: 5
+Thank you for using the Movie Ticket Booking System!
